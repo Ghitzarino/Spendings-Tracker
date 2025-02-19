@@ -1,0 +1,1 @@
+Spendings Tracker Application
