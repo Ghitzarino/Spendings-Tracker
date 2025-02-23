@@ -1,7 +1,7 @@
 import os
-import gspread
-import pandas as pd
-from google.oauth2.service_account import Credentials
+import gspread  # type: ignore
+import pandas as pd  # type: ignore
+from google.oauth2.service_account import Credentials  # type: ignore
 from data_plotting import *
 
 # Define the scope
@@ -47,11 +47,10 @@ try:
         if (not os.path.exists(f"plots/{email}")):
             os.mkdir(f"plots/{email}")
             
-        plot_spending_by_days(email, group)
         plot_spending_by_category(email, group)
+        plot_daily_spending(email, group)
         plot_monthly_spending(email, group)
         plot_cumulative_spending(email, group)
-        plot_daily_spending_histogram(email, group)
         plot_spending_frequency_by_hour(email, group)
 
 except Exception as e:
