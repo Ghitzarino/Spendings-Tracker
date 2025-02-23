@@ -52,6 +52,7 @@ try:
         plot_monthly_spending(email, group)
         plot_cumulative_spending(email, group)
         plot_daily_spending_histogram(email, group)
+        plot_spending_frequency_by_hour(email, group)
 
 except Exception as e:
     print(f"An error occurred: {e}")
