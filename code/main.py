@@ -9,7 +9,7 @@ SCOPES = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapi
 
 try:
     # Load credentials from the JSON file
-    creds = Credentials.from_service_account_file("../personal/credentials.json", scopes=SCOPES)
+    creds = Credentials.from_service_account_file("personal/credentials.json", scopes=SCOPES)
 
     # Authorize the client
     client = gspread.authorize(creds)
@@ -44,8 +44,8 @@ try:
 
     # Plot for each user
     for email, group in grouped_by_email:
-        if (not os.path.exists(f"../plots/{email}")):
-            os.mkdir(f"../plots/{email}")
+        if (not os.path.exists(f"plots/{email}")):
+            os.mkdir(f"plots/{email}")
             
         plot_spending_by_days(email, group)
         plot_spending_by_category(email, group)

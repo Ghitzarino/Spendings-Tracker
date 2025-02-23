@@ -14,7 +14,7 @@ def plot_spending_by_days(user_email, user_data):
     plt.ylabel("Spending (Ron)")
     plt.grid(True)
 
-    plt.savefig(f"../plots/{user_email}/spending_by_days.png")
+    plt.savefig(f"plots/{user_email}/spending_by_days.png")
 
     plt.close()  # Close the plot to free memory
 
@@ -25,7 +25,7 @@ def plot_spending_by_category(user_email, user_data):
     plt.pie(category_spending, labels=category_spending.index, autopct="%1.1f%%", startangle=140)
     plt.title(f"Spending by Category for {user_email}")
 
-    plt.savefig(f"../plots/{user_email}/spending_by_category.png")
+    plt.savefig(f"plots/{user_email}/spending_by_category.png")
 
     plt.close()  # Close the plot to free memory
 
@@ -39,7 +39,7 @@ def plot_monthly_spending(user_email, user_data):
     plt.xlabel("Month")
     plt.ylabel("Total Spending (Ron)")
 
-    plt.savefig(f"../plots/{user_email}/monthly_spending.png")
+    plt.savefig(f"plots/{user_email}/monthly_spending.png")
 
     plt.close()  # Close the plot to free memory
 
@@ -51,7 +51,7 @@ def plot_daily_spending_histogram(user_email, user_data):
     plt.xlabel("Spending (Ron)")
     plt.ylabel("Frequency")
 
-    plt.savefig(f"../plots/{user_email}/daily_spending.png")
+    plt.savefig(f"plots/{user_email}/daily_spending.png")
     
     plt.close()  # Close the plot to free memory
 
@@ -65,7 +65,7 @@ def plot_cumulative_spending(user_email, user_data):
     plt.ylabel("Cumulative Spending (Ron)")
     plt.grid(True)
 
-    plt.savefig(f"../plots/{user_email}/cumulative_spending.png")
+    plt.savefig(f"plots/{user_email}/cumulative_spending.png")
 
     plt.close()  # Close the plot to free memory
 
@@ -93,6 +93,6 @@ def plot_spending_frequency_by_hour(user_email, user_data):
     plt.xticks(range(24), [f"{hour}:00" for hour in range(24)], rotation=45)
     plt.grid(axis="y", linestyle="--", alpha=0.7)
 
-    plt.savefig(f"../plots/{user_email}/spending_frequency_by_hour.png")
+    plt.savefig(f"plots/{user_email}/spending_frequency_by_hour.png")
 
     plt.close()  # Close the plot to free memory
