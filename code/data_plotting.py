@@ -22,7 +22,7 @@ def plot_monthly_spending(user_email, user_data):
 
     # Plot the data
     plt.figure(figsize=(10, 6))
-    monthly_spending.plot(kind="bar", edgecolor="black")
+    monthly_spending.plot(kind="bar", edgecolor="black", color="pink")
     plt.title(f"Monthly Spending for {user_email}")
     plt.xlabel("Month")
     plt.ylabel("Total Spending (Ron)")
@@ -54,7 +54,7 @@ def plot_daily_spending(user_email, user_data):
 
     # Plot the data as a bar graph
     plt.figure(figsize=(10, 6))
-    daily_spending.plot(kind="bar", edgecolor="black")
+    daily_spending.plot(kind="bar", edgecolor="black", color="pink")
     plt.title(f"Daily Spending for {user_email} (Current Month)")
     plt.xlabel("Day of the Month")
     plt.ylabel("Total Spending (Ron)")
@@ -82,7 +82,7 @@ def plot_cumulative_spending(user_email, user_data):
 
      # Plot the data
     plt.figure(figsize=(10, 6))
-    plt.plot(user_data["Date"], user_data["Cumulative Spending"], marker="o", linestyle="-")
+    plt.plot(user_data["Date"], user_data["Cumulative Spending"], marker="o", linestyle="-", color="pink")
     plt.title(f"Cumulative Spending for {user_email}")
     plt.xlabel("Date")
     plt.ylabel("Cumulative Spending (Ron)")
@@ -106,7 +106,7 @@ def plot_spending_frequency_by_hour(user_email, user_data):
 
     # Plot the data
     plt.figure(figsize=(10, 6))
-    spending_frequency.plot(kind="bar", edgecolor="black")
+    spending_frequency.plot(kind="bar", edgecolor="black", color="pink")
     plt.title(f"Spending Frequency by Hour for {user_email}")
     plt.xlabel("Hour of the Day")
     plt.ylabel("Number of Transactions")
